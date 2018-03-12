@@ -1,0 +1,124 @@
+body
+{
+	background-image: url("../materials/mike-erskine-144525.png");
+	background-size:cover;
+	background-repeat: no-repeat;
+	color: white;	
+	font-size:20px;
+}
+
+.top
+{
+	/*background-color:transparent;*/
+	filter:alpha(Opacity=100);
+	-moz-opacity:0.5;
+	opacity: 0.5;
+	width:300px;
+	margin:250px auto 0px auto;
+	text-align:center;
+}
+
+.content
+{
+	width:300px;
+	margin:auto auto;
+	text-align:center;
+}
+
+p#loginlogo
+{
+	font-family:微软雅黑;
+	font-size  :45px;
+	/*letter-spacing:0.2em;*/
+}
+
+.username
+{
+	margin:20px auto 20px auto;
+	filter:alpha(Opacity=100);
+	-moz-opacity:0.5;
+	opacity: 0.5;
+}
+
+input::-webkit-input-placeholder {font-size: 15px}
+input:-moz-placeholder {font-size: 15px}
+input:-ms-input-placeholder {font-size: 15px}
+input {outline:none;}
+
+input#user
+{
+	width:300px;
+	height:30px;
+	font-size:18px;
+	font-weight:bold;
+	color:grey !important;
+	border-radius:15px;
+	border-style:none;
+	text-indent: 15px
+}
+
+input#pswd
+{
+	width:300px;
+	height:30px;
+	font-size:18px;
+	font-weight:bold;
+	color:grey !important;
+	border-radius:15px;
+	border-style:none;
+	text-indent: 15px;
+}
+
+input#in
+{
+	width:100px;
+	height:30px;
+	font-size:18px;
+	font-weight:bold;
+	color:white !important;
+	background-color:rgb(200,230,0);
+	border-style:none;
+	border-radius:15px;
+}
+
+.button
+{
+	margin:20px auto 20px auto;
+}
+
+.password
+{
+	margin:20px auto 20px auto;
+	filter:alpha(Opacity=80);
+	-moz-opacity:0.5;
+	opacity: 0.5;
+}
+
+.bottom
+{
+	width:99%;
+    position:absolute;
+    bottom:50px;
+    text-align:center;
+}
+
+a#signup
+{
+	text-decoration:none;
+	font-size: 12px;
+	color:white;
+	font-weight:bold;
+}
+
+a#about
+{
+	text-decoration:none;
+	font-size: 12px;
+	color:white;
+}
+.warning
+{
+	color:red;
+	font-size:15px;
+	font-weight:bold;
+}

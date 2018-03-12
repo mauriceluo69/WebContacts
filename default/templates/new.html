@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<link href="../static/css/new.css" type="text/css" rel="stylesheet"/>
+		<title>添加新的联系人</title>
+	</head>
+
+	<body>
+		<div id="div">
+		<h2>请输入信息</h2>
+		
+		<form action="#" method="POST">{% csrf_token %}
+			
+			<p>姓名
+				<input type="text" class="h" name="name" size="15" maxlength="30"/>
+			</p>
+			
+			<p>电话
+				<input type="text" class="h" name="phone" size="15" maxlength="30"/>
+			</p>
+			
+			<p>邮箱
+				<input type="text" class="h" name="email" size="15" maxlength="30"/>
+			</p>
+			
+			<p>地址
+				<input type="text" class="h" name="address" size="15" maxlength="30"/>
+			</p>
+			
+			<p>QQ
+				<input type="text" class="h" name="qq" size="15" maxlength="30"/>
+			</p>
+			
+			<p></p>
+			
+			<input type="submit" class="sub" name="login" value="OK">
+			
+		</form>
+		</div>
+	</body>
+
+</html>

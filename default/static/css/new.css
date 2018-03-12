@@ -1,0 +1,42 @@
+body
+{
+	background-image: url("../materials/mike-erskine-144525.png");
+	background-size:cover;
+	background-repeat: no-repeat;
+	color: white;	
+	font-size:20px;
+}
+
+div#div
+{
+	width:300px;
+	margin:250px auto 0px auto;
+	text-align:center;
+}
+
+.h
+{
+	width:200px;
+	height:24px;
+	font-size:20px;
+	font-weight:bold;
+	color:grey !important;
+	border-radius:12px;
+	border-style:none;
+	text-indent: 15px;
+	filter:alpha(Opacity=100);
+	-moz-opacity:0.5;
+	opacity: 0.5;
+}
+
+.sub
+{
+	width:100px;
+	height:30px;
+	font-size:18px;
+	font-weight:bold;
+	color:white !important;
+	background-color:rgb(200,230,0);
+	border-style:none;
+	border-radius:15px;
+}

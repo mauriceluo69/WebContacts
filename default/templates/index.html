@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<meta name="description" content="Web Contact login page"/>
+		<meta name="keywords" content="web contact, contact"/>
+		<meta http-equiv="author" content="Maurice Luo"/>
+		<meta http-equiv="pragma" content="no-cache"/>
+		<link href="../../static/css/login.css" type="text/css" rel="stylesheet"/>
+		<title>登录</title>
+	</head>
+	
+	
+	<body>
+		<script src=http://libs.baidu.com/jquery/1.10.2/jquery.min.js></script>
+		<script src="../../static/js/login.js"></script>
+		<div class="top">
+			<p id="loginlogo">Web 通讯录</p>
+		</div>
+		
+		<div class="content">
+			<form id="LOGIN" action="#" onsubmit="return login(this)" method="post">{% csrf_token %}
+				
+				<div class="username">
+					<input id="user" name="user" type="text" maxlength="30" placeholder="用户名"/>
+				</div>
+				
+				<div class="password">
+					<input id="pswd" name="pswd" type="password" maxlength="30" placeholder="密码"/>
+				</div>
+				
+				<span id="warn" class="warning">{{ error_msg }}</span>
+				
+				<div class="button">
+					<input id="in" type="submit" value="Go"/>
+				</div>
+			</form>	
+		</div>
+		<!--
+		<div class="bottom">
+			<a id="signup" href="signup.html">还没有账号？新用户注册</a><br>
+			<a id="about" href="about.html">关于</a>
+		</div>
+		-->
+		
+	</body>
+
+</html>

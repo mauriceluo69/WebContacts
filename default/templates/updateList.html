@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8">
+    <title>添加新联系人</title>
+    <meta name="keywords" content="通讯录,添加新联系人">
+    <meta name="description" content="通讯录的添加新联系人页面">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="StyleSheet" href="../../static/css/register.css">
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js">
+    </script>
+    <!--script src="添加新的联系人的jq.js"></script-->
+    <script src="../../static/js/register.js"></script>
+</head>
+
+<body>
+    <div class="form_content">
+        <form id="test" action="#" method="POST" onsubmit="return login3()">{% csrf_token %}
+            <input type="hidden" name="id" value="{{ person.id }}">
+            <fieldset>
+                <legend>添加新的联系人</legend>
+                <div class="form-row">
+                    <div class="field-label">
+                        <label for="name">姓名</label>:</div>
+                    <div class="field-widget">
+                        <input name="name" id="name" class="required" value="{{ person.name }}" onblur="login1()"/>
+                        <p class="warn" id="warn1"></p>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="field-label">
+                        <label for="address">住址</label>:</div>
+                    <div class="field-widget">
+                        <input name="address" id="address" class="required" value="{{ person.address }}" onblur="login2()"/>
+                        <p class="warn" id="warn2"></p>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="field-label">
+                        <label for="email">Email</label>:</div>
+                    <div class="field-widget">
+                        <input name="email" id="email" class="required" value="{{ person.email }}" onblur="login3()"/>
+                        <p class="warn" id="warn3"></p>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="field-label">
+                        <label for="qq">QQ</label>:</div>
+                    <div class="field-label">
+                        <input name="qq" id="qq" class="required" value="{{ person.qq }}" onblur="login4()"/>
+                        <p class="warn" id="warn4"></p>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="field-label">
+                        <label for="phone">电话号码</label>:</div>
+                    <div class="field-label">
+                        <input name="phone" id="phone" class="required" value="{{ person.phone }}" onblur="login5()"/>
+                        <p class="warn"  id="warn5"></p>
+                    </div>
+                </div>
+            </fieldset>
+            <input type="submit" class="submit" value="提交" onclick="login6()"/>
+            <button type="reset" class="reset" onclick="location.href='/'">取消</button>
+        </form>
+    </div>
+</body>
+
+</html>

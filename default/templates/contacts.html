@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <meta name="description" content="Web Contact about"/>
+        <meta http-equiv="author" content="Maurice Luo"/>
+        <meta http-equiv="pragma" content="no-cache"/>
+        <title>通讯录表格</title>
+        <link rel="StyleSheet" href="../../static/css/contacts.css">
+    </head>
+
+    <body>
+        <form id="form1" name="form1" method="post" action="">
+            <div class="widget widget-table">
+                <div class="widget-header">
+                    <i class="icon-th-list"></i>
+
+                    <h3>通讯录</h3>
+                </div>
+                <div class="widget-content">
+                    <table class="table table-striped table-bordered" table border="0" cellpadding="0" cellspacing="0"
+                           id="tabProduct">
+                        <thead>
+                        <tr>
+                            <td bgcolor="#EFEFEF" EditType="TextBox">姓名</td>
+                            <td bgcolor="#EFEFEF" EditType="TextBox">email</td>
+                            <td bgcolor="#EFEFEF" EditType="TextBox">住址</td>
+                            <td bgcolor="#EFEFEF" EditType="TextBox">QQ</td>
+                            <td bgcolor="#EFEFEF" EditType="TextBox">电话</td>
+                            <td bgcolor="#EFEFEF" EditType="TextBox"></td>
+                            <td bgcolor="#EFEFEF" EditType="TextBox"></td>
+                        </tr>
+                        </thead>
+                        <tbody> {% for person  in people %}
+                            <tr>
+                                <td bgcolor="#FFFFFF">{{ person.name }}</td>
+                                <td bgcolor="#FFFFFF">{{ person.email }}</td>
+                                <td bgcolor="#FFFFFF">{{ person.address }}</td>
+                                <td bgcolor="#FFFFFF">{{ person.qq }}</td>
+                                <td bgcolor="#FFFFFF">{{ person.phone }}</td>
+                                <td class="text-center">
+                                    <a href="/del/?id={{ person.id }}" type="button" name="Submit2">删除</a>
+                                    <a href="/update/?id={{ person.id }}" type="button" name="Submit2">编辑</a>
+                                </td>
+                            </tr> {% endfor %} </tbody>
+                    </table>
+                </div>
+                <br/>
+                <a href="/add/" type="button" name="Submit" class="btn btn-success pull-right">添加</a>
+                <a href="/account/logout/" type="button" name="Submit" class="btn btn-success pull-right">注销</a>
+            </div>
+        </form>
+    </body>
+
+</html>
